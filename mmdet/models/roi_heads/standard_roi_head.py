@@ -103,7 +103,7 @@ class StandardRoIHead(BaseRoIHead, BBoxTestMixin, MaskTestMixin):
             for i in range(num_imgs):
                 import pdb
                 #pdb.set_trace()
-                if self.train_cfg.assigner['type'] == 'AvgAssigner':
+                if self.train_cfg.assigner['type'] == 'GroupAssigner':
                     assign_result, select_thr = self.bbox_assigner.assign(
                         proposal_list[i], gt_bboxes[i], gt_bboxes_ignore[i],
                         gt_labels[i])
