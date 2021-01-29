@@ -20,7 +20,7 @@ class DIORDataset(XMLDataset):
         self.num_classes = len(self.CLASSES)
         self.class_to_index = dict(zip(self.CLASSES, range(self.num_classes)))
         self.min_size = 0.5
-        self.img_prefix = '/disk2/hm/data/DIOR/DIOR'
+        #self.img_prefix = '/disk2/hm/data/DIOR/DIOR'  # if need to define img_prefix by our own
 
     def load_annotations(self, ann_file):
         img_infos = []
